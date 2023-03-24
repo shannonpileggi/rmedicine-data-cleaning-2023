@@ -9,28 +9,28 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Principals of Data Cleaning",
+    "title": "Principles of Data Cleaning",
     "section": "",
-    "text": "🗓 June X, 2023 | X:00am - X:00pm EDT\n🏨 Virtual\n💥 FREE workshop registration"
+    "text": "🗓 June 6, 2023 | 8:30am - 12:00pm EDT\n🏨 Virtual\n💥 FREE workshop registration"
   },
   {
     "objectID": "index.html#learning-objectives",
     "href": "index.html#learning-objectives",
-    "title": "Principals of Data Cleaning",
+    "title": "Principles of Data Cleaning",
     "section": "Learning objectives",
     "text": "Learning objectives\n\none\ntwo\nthree"
   },
   {
     "objectID": "index.html#is-this-course-for-me",
     "href": "index.html#is-this-course-for-me",
-    "title": "Principals of Data Cleaning",
+    "title": "Principles of Data Cleaning",
     "section": "Is this course for me?",
     "text": "Is this course for me?\nIf your answer to any of the following questions is “yes”, then this is the right workshop for you.\n\none?\ntwo?\nthree?\n\nThe workshop is designed for those with some experience in R. It will be assumed that participants can perform basic data manipulation. Experience with the {tidyverse} and the %>%/|> operator is a plus, but not required."
   },
   {
     "objectID": "index.html#prework",
     "href": "index.html#prework",
-    "title": "Principals of Data Cleaning",
+    "title": "Principles of Data Cleaning",
     "section": "Prework",
     "text": "Prework\nBefore attending the workshop please have the following installed and configured on your machine.\n\nRecent version of R\nRecent version of RStudio\nRecent version of packages used in workshop.\ninstll_pkgs <- c(\"tidyverse\")\ninstall.packages(instll_pkgs)\nEnsure you can knit R markdown documents??\n\nOpen RStudio and create a new Rmarkdown document\nSave the document and check you are able to knit it."
   },
@@ -126,6 +126,62 @@
     "text": "Slide 2"
   },
   {
+    "objectID": "slides/index.html#is-it-the-patient",
+    "href": "slides/index.html#is-it-the-patient",
+    "title": "Data Cleaning",
+    "section": "Is it the Patient?",
+    "text": "Is it the Patient?"
+  },
+  {
+    "objectID": "slides/index.html#is-it-the-visitencounter",
+    "href": "slides/index.html#is-it-the-visitencounter",
+    "title": "Data Cleaning",
+    "section": "Is it the Visit/Encounter?",
+    "text": "Is it the Visit/Encounter?"
+  },
+  {
+    "objectID": "slides/index.html#pivoting-longer-common",
+    "href": "slides/index.html#pivoting-longer-common",
+    "title": "Data Cleaning",
+    "section": "Pivoting Longer (common)",
+    "text": "Pivoting Longer (common)\n\nVisit Dates/Measures\nYour Turn (Exercise)"
+  },
+  {
+    "objectID": "slides/index.html#pivoting-wider",
+    "href": "slides/index.html#pivoting-wider",
+    "title": "Data Cleaning",
+    "section": "Pivoting Wider",
+    "text": "Pivoting Wider"
+  },
+  {
+    "objectID": "slides/index.html#padding-unobserved-dates-weekends",
+    "href": "slides/index.html#padding-unobserved-dates-weekends",
+    "title": "Data Cleaning",
+    "section": "Padding unobserved dates (weekends?)",
+    "text": "Padding unobserved dates (weekends?)"
+  },
+  {
+    "objectID": "slides/index.html#padding-unovserved-times",
+    "href": "slides/index.html#padding-unovserved-times",
+    "title": "Data Cleaning",
+    "section": "Padding unovserved times",
+    "text": "Padding unovserved times"
+  },
+  {
+    "objectID": "slides/index.html#local-demographics-with-cdc-svi-data-one-to-one",
+    "href": "slides/index.html#local-demographics-with-cdc-svi-data-one-to-one",
+    "title": "Data Cleaning",
+    "section": "Local Demographics with CDC SVI data (one to one)",
+    "text": "Local Demographics with CDC SVI data (one to one)"
+  },
+  {
+    "objectID": "slides/index.html#patient-demographics-with-lab-results-one-to-many",
+    "href": "slides/index.html#patient-demographics-with-lab-results-one-to-many",
+    "title": "Data Cleaning",
+    "section": "Patient Demographics with Lab results (one to many)",
+    "text": "Patient Demographics with Lab results (one to many)"
+  },
+  {
     "objectID": "slides/index.html#slide-1-4",
     "href": "slides/index.html#slide-1-4",
     "title": "Data Cleaning",
@@ -149,34 +205,6 @@
   {
     "objectID": "slides/index.html#slide-2-5",
     "href": "slides/index.html#slide-2-5",
-    "title": "Data Cleaning",
-    "section": "Slide 2",
-    "text": "Slide 2"
-  },
-  {
-    "objectID": "slides/index.html#slide-1-6",
-    "href": "slides/index.html#slide-1-6",
-    "title": "Data Cleaning",
-    "section": "Slide 1",
-    "text": "Slide 1"
-  },
-  {
-    "objectID": "slides/index.html#slide-2-6",
-    "href": "slides/index.html#slide-2-6",
-    "title": "Data Cleaning",
-    "section": "Slide 2",
-    "text": "Slide 2"
-  },
-  {
-    "objectID": "slides/index.html#slide-1-7",
-    "href": "slides/index.html#slide-1-7",
-    "title": "Data Cleaning",
-    "section": "Slide 1",
-    "text": "Slide 1"
-  },
-  {
-    "objectID": "slides/index.html#slide-2-7",
-    "href": "slides/index.html#slide-2-7",
     "title": "Data Cleaning",
     "section": "Slide 2",
     "text": "Slide 2"
