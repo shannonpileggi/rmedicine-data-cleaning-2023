@@ -6,25 +6,18 @@ logo: "images/R-Med-logo-revised-pride.png"
 editor: source
 format: 
   revealjs: 
-    theme: slides.scss
     transition: fade
     slide-number: true
-    chalkboard: true
 execute:
   echo: true
-  output: asis
   freeze: auto
-cache: true
 ---
 
-{{< include 00-setup.qmd >}}
 
-{{< include 01-crystal.qmd >}}
+```{r}
+mtcars |> tibble::as_tibble()
+```
+
 
 {{< include 02-shannon.qmd >}}
 
-{{< include 03-peter.qmd >}}
-
-{{< include 04-duncan.qmd >}}
-
-{{< include 05-thank-you.qmd >}}
