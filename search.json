@@ -11,21 +11,21 @@
     "href": "exercises.html#cl1",
     "title": "Data Cleaning: Exercises",
     "section": "CL1",
-    "text": "CL1"
+    "text": "CL1\n\nImport messy_uc.xlsx using readxl::read_excel()\n\n\n# import raw data\ndf_raw &lt;- read_excel(\n  path = \"data/messy_uc.xlsx\",\n  sheet = \"Data\",\n  skip = 5\n)"
   },
   {
     "objectID": "exercises.html#cl2",
     "href": "exercises.html#cl2",
     "title": "Data Cleaning: Exercises",
     "section": "CL2",
-    "text": "CL2"
+    "text": "CL2\n\nUse an exploratory function to review the data.\n\n\n\nShow the code solution\ndplyr::glimpse(df_raw)\n\nskimr::skim(df_raw)\n\nbase::summary(df_raw)\n\nvisdat::vis_dat(df_raw)\n\nsummarytools::view(summarytools::dfSummary(df_raw))\n\nDataExplorer::create_report(df_raw)\n\nHmisc::describe(df_raw)"
   },
   {
     "objectID": "exercises.html#set-up",
     "href": "exercises.html#set-up",
     "title": "Data Cleaning: Exercises",
     "section": "Set up",
-    "text": "Set up\n\n# import raw data\ndf_raw &lt;- read_excel(\n  path = here(\"data\", \"messy_uc.xlsx\"),\n  sheet = \"Data\",\n  skip = 5\n)\n\n# do initial cleaning of variable names and removing empty rows/columns\ndf_clean &lt;- df_raw |&gt; \n  janitor::clean_names() |&gt; \n  janitor::remove_empty(which = c(\"rows\", \"cols\"))"
+    "text": "Set up\n\n# do initial cleaning of variable names and removing empty rows/columns\ndf_clean &lt;- df_raw |&gt; \n  janitor::clean_names() |&gt; \n  janitor::remove_empty(which = c(\"rows\", \"cols\"))"
   },
   {
     "objectID": "exercises.html#sp1",
