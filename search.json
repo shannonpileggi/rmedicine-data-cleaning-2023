@@ -662,21 +662,14 @@
     "href": "slides/index.html#pivoting-longer-1",
     "title": "Data Cleaning",
     "section": "Pivoting Longer",
-    "text": "Pivoting Longer\n\nYour Turn (Exercise) with endo_data\nMeasurements of Trans-Epithelial Electrical Resistance (TEER, the inverse of leakiness) in biopsies of 3 segments of intestine.\nThis could be affected by portal hypertension in pts with liver cirrhosis\n\n\n\n# A tibble: 10 × 5\n   pat_id portal_htn duod_teer ileal_teer colon_teer\n    &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1      1          1      4.33       14.6       16.2\n 2      2          0     11.7        16.0       19.0\n 3      3          1      4.12       13.8       15.2\n 4      4          1      4.62       16.4       18.1\n 5      5          0     12.4        15.8       19.0\n 6      6          0     13.0        16.2       18.8\n 7      7          0     11.9        15.7       18.3\n 8      8          1      4.87       16.6       18.8\n 9      9          1      4.23       15.0       16.9\n10     10          0     12.8        16.7       19.1"
-  },
-  {
-    "objectID": "slides/index.html#pivoting-longer-with-endo_data",
-    "href": "slides/index.html#pivoting-longer-with-endo_data",
-    "title": "Data Cleaning",
-    "section": "Pivoting Longer with endo_data",
-    "text": "Pivoting Longer with endo_data\n\nDatasetArgumentsCodeSolutionResult\n\n\n\n\n# A tibble: 10 × 5\n   pat_id portal_htn duod_teer ileal_teer colon_teer\n    &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1      1          1      4.33       14.6       16.2\n 2      2          0     11.7        16.0       19.0\n 3      3          1      4.12       13.8       15.2\n 4      4          1      4.62       16.4       18.1\n 5      5          0     12.4        15.8       19.0\n 6      6          0     13.0        16.2       18.8\n 7      7          0     11.9        15.7       18.3\n 8      8          1      4.87       16.6       18.8\n 9      9          1      4.23       15.0       16.9\n10     10          0     12.8        16.7       19.1\n\n\n\n\n\nWhat values do you want to use for:\n\ncols\nnames_pattern = “(.+)_teer”\nnames_to\nvalues_to\n\nNote that we are giving you the value for names_pattern, which means that we want to keep the characters of the name (of whatever length) before “_teer”\n\n\n\n\nFill in the blanks to pivot this dataset to tall format, with columns for the intestinal location and the teer value.\nNote that we are giving you names_pattern\n\n\nendo_data |&gt; \n  pivot_longer(\n    cols =  ,\n    names_pattern = \"(.+)_teer\",\n    names_to =   ,\n    values_to = \n  )\n\n\n\n\nFill in the blanks to pivot this dataset to tall format, with columns for the intestinal location and the teer value.\n\n\nendo_data |&gt; \n  pivot_longer(\n    cols = \"duod_teer\":\"colon_teer\",\n    names_pattern = \"(.+)_teer\",\n    names_to = c(\"location\"),\n    values_to = \"teer\"\n  )\n\n\nRun the code, and look at the resulting table.\n\n\n\n\n\n# A tibble: 30 × 4\n   pat_id portal_htn location  teer\n    &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt;\n 1      1          1 duod      4.33\n 2      1          1 ileal    14.6 \n 3      1          1 colon    16.2 \n 4      2          0 duod     11.7 \n 5      2          0 ileal    16.0 \n 6      2          0 colon    19.0 \n 7      3          1 duod      4.12\n 8      3          1 ileal    13.8 \n 9      3          1 colon    15.2 \n10      4          1 duod      4.62\n# ℹ 20 more rows\n\n\n\nDo you think that portal hypertension has an effect on TEER and (its inverse) epithelial leakiness?"
+    "text": "Pivoting Longer\n\nYour Turn (Exercise) with endo_data\nMeasurements of Trans-Epithelial Electrical Resistance (TEER, the inverse of leakiness) in biopsies of 3 segments of intestine.\nThis could be affected by portal hypertension in patients with liver cirrhosis\n\n\n\n# A tibble: 10 × 5\n   pat_id portal_htn duod_teer ileal_teer colon_teer\n    &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1      1          1      4.33       14.6       16.2\n 2      2          0     11.7        16.0       19.0\n 3      3          1      4.12       13.8       15.2\n 4      4          1      4.62       16.4       18.1\n 5      5          0     12.4        15.8       19.0\n 6      6          0     13.0        16.2       18.8\n 7      7          0     11.9        15.7       18.3\n 8      8          1      4.87       16.6       18.8\n 9      9          1      4.23       15.0       16.9\n10     10          0     12.8        16.7       19.1"
   },
   {
     "objectID": "slides/index.html#exercise-ph1",
     "href": "slides/index.html#exercise-ph1",
     "title": "Data Cleaning",
     "section": "Exercise PH1",
-    "text": "Exercise PH1\n\nComplete Data Cleaning Fundamentals Exercise PH1.\n\nIf you have the exercise done correctly, click on the Reactions tab in Zoom, and click to put the “thumbs up” emoji 👍 on your screen.\nIf you are having trouble, click on the Reactions tab in Zoom, and click to put the “raised hand” emoji ✋ on your screen.\n\n–&gt; Take me to the exercises &lt;–\n\n\n\n−+\n03:00"
+    "text": "Exercise PH1\n\nComplete Data Cleaning Fundamentals Exercise PH1.\n\nDo This in Posit Cloud\nIf you have the exercise done correctly, click on the Reactions tab in Zoom, and click to put the “thumbs up” emoji 👍 on your screen.\nIf you are having trouble, click on the Reactions tab in Zoom, and click to put the “raised hand” emoji ✋ on your screen.\n\n–&gt; Take me to the exercise solution &lt;–\n\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/index.html#pivoting-wider",
@@ -749,39 +742,11 @@
     "text": "What the Left Join Looks Like"
   },
   {
-    "objectID": "slides/index.html#your-turn-to-join-1",
-    "href": "slides/index.html#your-turn-to-join-1",
-    "title": "Data Cleaning",
-    "section": "Your Turn to Join",
-    "text": "Your Turn to Join\n\nThe ProblemThe CodeThe Result\n\n\n\nJoining demo to pot with a left_join\nleft_join(data_x, data_y, by = “uniqid”)\n\n\n\n\nreplace the generic arguments below with the correct ones to join demo to pot and produce new_data.\n\n\nnew_data &lt;- left_join(data_x, data_y, by = \"uniqid\")\nnew_data\n\n\n\n\n\n# A tibble: 9 × 4\n  pat_id name                 age     k\n  &lt;chr&gt;  &lt;chr&gt;              &lt;dbl&gt; &lt;dbl&gt;\n1 001    Arthur Blankenship    67   3.2\n2 002    Britney Jonas         23   3.7\n3 003    Sally Davis           63   4.2\n4 004    Al Jones              44   4.4\n5 005    Gary Hamill           38   4.1\n6 006    Ken Bartoletti        33   4  \n7 007    Ike Gerhold           52   3.6\n8 008    Tatiana Grant         42   4.2\n9 009    Antione Delacroix     27   4.9"
-  },
-  {
     "objectID": "slides/index.html#exercise-ph2",
     "href": "slides/index.html#exercise-ph2",
     "title": "Data Cleaning",
     "section": "Exercise PH2",
-    "text": "Exercise PH2\n\nComplete Data Cleaning Fundamentals Exercise PH2.\n–&gt; Take me to the exercises &lt;–\n\nIf you have the exercise done correctly, click on the Reactions tab in Zoom, and click to put the “thumbs up” emoji 👍 on your screen.\nIf you are having trouble, click on the Reactions tab in Zoom, and click to put the “raised hand” emoji ✋ on your screen.\n\n\n\n\n−+\n03:00"
-  },
-  {
-    "objectID": "slides/index.html#solution-ph2",
-    "href": "slides/index.html#solution-ph2",
-    "title": "Data Cleaning",
-    "section": "Solution PH2",
-    "text": "Solution PH2\n\nnew_data &lt;- left_join(demo, pot, by = \"pat_id\")\nnew_data"
-  },
-  {
-    "objectID": "slides/index.html#now-add-creatinine-cr-to-new_data",
-    "href": "slides/index.html#now-add-creatinine-cr-to-new_data",
-    "title": "Data Cleaning",
-    "section": "Now add Creatinine (cr) to new_data",
-    "text": "Now add Creatinine (cr) to new_data\n\nThe ProblemThe CodeThe SolutionThe Result\n\n\n\nJoining new_data and cr with a left_join\nleft_join(data_x, data_y, by = “uniqid”)\n\n\n\n\nReplace the generic arguments with the correct ones to join new_data and cr and produce new_data2.\n\n\nnew_data2 &lt;- left_join(data_x, data_y, by = \"uniqid\")\nnew_data2\n\n\n\n\nnew_data2 &lt;- left_join(new_data, cr, by = \"pat_id\")\nnew_data2\n\n\n\n\n\n# A tibble: 9 × 5\n  pat_id name                 age     k    cr\n  &lt;chr&gt;  &lt;chr&gt;              &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 001    Arthur Blankenship    67   3.2   0.2\n2 002    Britney Jonas         23   3.7   0.5\n3 003    Sally Davis           63   4.2   0.9\n4 004    Al Jones              44   4.4   1.5\n5 005    Gary Hamill           38   4.1   0.7\n6 006    Ken Bartoletti        33   4     0.9\n7 007    Ike Gerhold           52   3.6   0.7\n8 008    Tatiana Grant         42   4.2   1  \n9 009    Antione Delacroix     27   4.9   1.7\n\n\n\nAl has HTN and DM2\nAntoine has early stage FSGS"
-  },
-  {
-    "objectID": "slides/index.html#exercise-ph3",
-    "href": "slides/index.html#exercise-ph3",
-    "title": "Data Cleaning",
-    "section": "Exercise PH3",
-    "text": "Exercise PH3\n\nComplete Data Cleaning Fundamentals Exercise PH3.\n–&gt; Take me to the exercises &lt;–\n\nIf you have the exercise done correctly, click on the Reactions tab in Zoom, and click to put the “thumbs up” emoji 👍 on your screen.\nIf you are having trouble, click on the Reactions tab in Zoom, and click to put the “raise hand” emoji ✋ on your screen.\n\n\n\n\n−+\n03:00"
+    "text": "Exercise PH2\n\nComplete Data Cleaning Fundamentals Exercise PH2.\n\nDo This in Posit Cloud\nIf you have the exercise done correctly, click on the Reactions tab in Zoom, and click to put the “thumbs up” emoji 👍 on your screen.\nIf you are having trouble, click on the Reactions tab in Zoom, and click to put the “raised hand” emoji ✋ on your screen.\n\n–&gt; Take me to the exercise &lt;–\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/index.html#workhorse-joins",
@@ -802,14 +767,14 @@
     "href": "slides/index.html#data-horror",
     "title": "Data Cleaning",
     "section": "Data Horror",
-    "text": "Data Horror\n\n\nData So Messy, it Constitutes a Data Crime\n \n What Should You Do?\n\n\nApocalypse Now Marlon Brando GIFfrom Apocalypse Now GIFs"
+    "text": "Data Horror\n\n\nData So Messy, it Constitutes a Data Crime\n \n What Should You Do?\n\n\n\n\n The Horror! The Horror!"
   },
   {
     "objectID": "slides/index.html#two-options",
     "href": "slides/index.html#two-options",
     "title": "Data Cleaning",
     "section": "Two Options",
-    "text": "Two Options\n\n\n\nYou can find the person who collected/entered the data\n\n\nIf you don’t correct this behavior now, this will torture many future data analysts\nEducate in this teachable moment about tidy data\nImprove the world\nSend them to Tidy Spreadsheets on YouTube here to prevent this in the future.\n\n\n\nThere is no way to find the person who collected/entered the data\n\n\nPull out some advanced data cleaning packages made for this particular kind of mess\n\nunpivotr\ntidyxl\nunheadr\n\nLean on a free e-book, Spreadsheet Munging Strategies\nWatch the 14 min video here"
+    "text": "Two Options\n\n\n\nYou can find the person who collected/entered the data\n\n\nIf you don’t correct this behavior now, this will torture many future data analysts\nEducate in this teachable moment about tidy data\nSend them to watch Tidy Spreadsheets on YouTube here to prevent this kind of Data Crime in the future.\nImprove the world, one (now tidy) data collector at a time.\n\n\n\nThere is no way to find the person who collected/entered the data\n\n\nPull out some advanced data cleaning packages made for this particular kind of mess\n\n{unpivotr}\n{tidyxl}\n{unheadr}\n\nWatch the unpivotr/tidyxl 14 min video here\nLearn from a free e-book, Spreadsheet Munging Strategies"
   },
   {
     "objectID": "slides/index.html#thank-you",
