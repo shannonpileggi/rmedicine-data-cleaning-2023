@@ -11,7 +11,7 @@
     "href": "exercises.html#cl1",
     "title": "Data Cleaning: Exercises",
     "section": "CL1",
-    "text": "CL1\n\nImport messy_uc.xlsx using readxl::read_excel()\n\n\n# import raw data\ndf_raw &lt;- read_excel(\n  path = \"data/messy_uc.xlsx\",\n  sheet = \"Data\",\n  skip = 5\n)"
+    "text": "CL1\n\nImport messy_uc.xlsx using readxl::read_excel().\n\n\n# import raw data\ndf_raw &lt;- read_excel(\n  path = \"data/messy_uc.xlsx\",\n  sheet = \"__\",\n  skip = __\n)\n\n\n\nShow the code solution\n# import raw data\ndf_raw &lt;- read_excel(\n  path = \"data/messy_uc.xlsx\",\n  sheet = \"Data\",\n  skip = 6\n)"
   },
   {
     "objectID": "exercises.html#cl2",
