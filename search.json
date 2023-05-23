@@ -123,7 +123,7 @@
     "href": "slides/index.html#schedule",
     "title": "Data Cleaning",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n11:00 - 11:50\nCrystal Lewis (Data management best practices)\n\n\n11:50 - 12:00\nBreak\n\n\n12:00 - 12:50\nShannon Pileggi (Data cleaning fundamentals)\n\n\n12:50 - 12:00\nBreak\n\n\n01:00 - 02:00\nPeter Higgins (Data wrangling & reshaping)\n\n\n\n\nPlease add any questions to the public Zoom chat. These may be answered in the moment or addressed at the end depending on context."
+    "text": "Schedule\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n11:00-11:10\nIntro/Logistics\n\n\n11:10 - 11:55\nCrystal Lewis (Data management best practices)\n\n\n11:55 - 12:00\nBreak\n\n\n12:00 - 12:50\nShannon Pileggi (Data cleaning fundamentals)\n\n\n12:50 - 12:00\nBreak\n\n\n01:00 - 02:00\nPeter Higgins (Data wrangling & reshaping)\n\n\n\n\nPlease add any questions to the public Zoom chat. These may be answered in the moment or addressed at the end depending on context."
   },
   {
     "objectID": "slides/index.html#pipes",
@@ -144,7 +144,7 @@
     "href": "slides/index.html#namespacing",
     "title": "Data Cleaning",
     "section": "Namespacing",
-    "text": "Namespacing\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\n\nselect(mtcars, mpg, cyl) \n\nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\n\ndplyr::select(mtcars, mpg, cyl) \n\nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
+    "text": "Namespacing\npackage::function()\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\n\nselect(mtcars, mpg, cyl) \n\nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\n\ndplyr::select(mtcars, mpg, cyl) \n\nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
   },
   {
     "objectID": "slides/index.html#data-horror-stories",
@@ -742,32 +742,18 @@
     "text": "Fancy Joins\n\nThere are multiple kinds of fancy joins (semi_join, anti_join, inner_join, full_join, union, intersect, setdiff) which come in handy once in a while.\nThese are all well explained here"
   },
   {
-    "objectID": "slides/index.html#slide-1",
-    "href": "slides/index.html#slide-1",
+    "objectID": "slides/index.html#data-horror",
+    "href": "slides/index.html#data-horror",
     "title": "Data Cleaning",
-    "section": "Slide 1",
-    "text": "Slide 1"
+    "section": "Data Horror",
+    "text": "Data Horror\n\n\nData So Messy, it Constitutes a Data Crime\n \n What Should You Do?\n\n\nApocalypse Now Marlon Brando GIFfrom Apocalypse Now GIFs"
   },
   {
-    "objectID": "slides/index.html#slide-2",
-    "href": "slides/index.html#slide-2",
+    "objectID": "slides/index.html#two-options",
+    "href": "slides/index.html#two-options",
     "title": "Data Cleaning",
-    "section": "Slide 2",
-    "text": "Slide 2"
-  },
-  {
-    "objectID": "slides/index.html#slide-1-1",
-    "href": "slides/index.html#slide-1-1",
-    "title": "Data Cleaning",
-    "section": "Slide 1",
-    "text": "Slide 1"
-  },
-  {
-    "objectID": "slides/index.html#slide-2-1",
-    "href": "slides/index.html#slide-2-1",
-    "title": "Data Cleaning",
-    "section": "Slide 2",
-    "text": "Slide 2"
+    "section": "Two Options",
+    "text": "Two Options\n\n\n\nYou can find the person who collected/entered the data\n\n\nIf you don’t correct this behavior now, this will torture many future data analysts\nEducate in this teachable moment about tidy data\nImprove the world\nSend them to Tidy Spreadsheets on YouTube here\n\n\n\nThere is no way to find the person who collected/entered the data\n\n\nPull out some advanced data cleaning packages made for this mess\n\nunpivotr\ntidyxl\nunheadr\n\nLean on a free e-book, Spreadsheet Munging Strategies\nWatch the 14 min video here"
   },
   {
     "objectID": "slides/index.html#thank-you",
