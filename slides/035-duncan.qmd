@@ -1,0 +1,78 @@
+# Not just cell values
+
+## Accidental text
+
+* Numerical value with a footnote symbol
+* Numerical value pasted in from other software
+* Text value that happens to be just a number, pasted in from other software
+* Identifiers that happen to be numbers sometimes
+
+## Accidental dates
+
+* Alphanumeric identifiers delimited by slashes or hyphens, that happen to
+  resemble dates
+* Numerical values that are uncertain, either/or.
+
+## Exercise: Find accidental data types
+
+1. List the number of cells of each data type in each column.  Expect at least
+   one string (header).
+1. List the addresses and values of cells of a particular data type in a
+   particular column.
+
+## Meaningful formatting
+
+* Strikethrough
+* Red text
+* Red background
+
+## Exercise: Find highlighted rows
+
+Assume that the whole row is highlighted, so you only have to check the cell in
+the first column of each row.
+
+1. List the number of rows highlighted in each colour.
+1. Display the colour.
+1. List the row numbers of rows highlighted in each colour.
+1. Omit those rows from the dataset.
+
+# Complex table layouts
+
+## Multiple rows of column headers
+
+* `behead()`
+* `"up"` and `"up-left"`
+
+## Exercise: Filter out unwanted cells by their formatting
+
+1. Retain the row and column numbers of the data cells
+1. Obtain the formatting of all cells
+1. Join the formatting to the data cells by the row and column number
+1. Filter
+
+## Small multiples
+
+* On the same sheet, using `partition()`
+* Similar tables on different sheets, using `map()`
+
+# And finally
+
+## Knowing when to give up
+
+* It's so messy that you distrust it and must inspect it in detail, so you might
+  as well clean it by hand.
+* The spreadsheet has barely any structure at all.  It would be quicker to clean
+  it by hand, and you would make fewer mistakes doing so.
+* There's only one spreadsheet, or all the spreadsheets are slightly different.
+
+## Examples of spreadsheets that aren't worth the bother
+
+* Star wars
+* US elections
+
+## Encouraging data publishers to do better
+
+* Link to that famous paper.
+* Link to the series of articles in Nature.
+
+## Exercise: Write a letter of advice to a data publisher
