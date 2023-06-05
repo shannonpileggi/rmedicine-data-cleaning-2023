@@ -4,7 +4,7 @@
     "href": "exercises.html",
     "title": "Data Cleaning: Exercises",
     "section": "",
-    "text": "Recommended: Complete these exercises in the dedicated Posit Cloud work space, which comes with\n\nall packages pre-installed, and\nan Rmarkdown document to fill in.\n\nIt will be helpful to peek here to verify that your tables generated in Posit Cloud match the desired output (or even to peek at the Code Solution if your cleaned tables don’t look right).\nClick here to enter the R/Medicine Posit cloud work space\nOtherwise: Follow along this document, work on your personal computer, and challenge yourself not to peek at the code solutions until you have completed the exercise."
+    "text": "Recommended: Complete these exercises in the dedicated Posit Cloud work space, which comes with\n\nall packages pre-installed, and\na Quarto document to fill in.\n\nIt will be helpful to peek here to verify that your tables generated in Posit Cloud match the desired output and code solutions.\nJoin R/Medicine Posit cloud work space for Cleaning Medical Data with R: bit.ly/posit-cloud-cleaning-medical-data\nOtherwise: Follow along this document, work on your personal computer, and challenge yourself not to peek at the code solutions until you have completed the exercise."
   },
   {
     "objectID": "exercises.html#cl1",
@@ -186,7 +186,7 @@
     "href": "slides/index.html#exercises",
     "title": "Cleaning Medical Data with R",
     "section": "Exercises",
-    "text": "Exercises\nAll exercises can be"
+    "text": "Exercises\nAll exercises can be accessed via Posit Cloud.\nSee exercise instructions for the link to access the Posit Cloud workspace."
   },
   {
     "objectID": "slides/index.html#pipes",
