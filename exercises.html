@@ -468,7 +468,7 @@ $ start_plt &lt;chr&gt; "273K/microL", "414K/microL", "323K/microL", "389K/micro
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      race <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"H/API"</span>, <span class="st">"Mixed"</span>, <span class="st">"Other"</span>) <span class="sc">~</span> <span class="st">"Other"</span>,</span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">.default =</span> race</span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_plt_clean =</span> <span class="fu">parse_number</span>(start_plt) </span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_plt_clean =</span> <span class="fu">parse_number</span>(start_plt, <span class="at">na =</span> <span class="st">"clumped"</span>) </span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -517,12 +517,7 @@ $ start_plt_clean &lt;dbl&gt; 273, 414, 323, 389, 411, 427, 249, 197, 204, 305, 
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  273  414  323  389  411  427  249  197  204  305  347  402  389  432  288
-[16]  177  290  312  399  423   NA  323  258  115 1550   37  188  456  356  291
-attr(,"problems")
-# A tibble: 1 × 4
-    row   col expected actual 
-  &lt;int&gt; &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  
-1    21    NA a number clumped</code></pre>
+[16]  177  290  312  399  423   NA  323  258  115 1550   37  188  456  356  291</code></pre>
 </div>
 </div>
 </div>
