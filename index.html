@@ -231,15 +231,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="prework" class="level2">
 <h2 class="anchored" data-anchor-id="prework">Prework</h2>
 <p>This workshop will largely be conducted in the Posit Cloud environment. Please create a login to the Posit Cloud instance of this workshop here:</p>
-<p><a href="https://posit.cloud/content/5758558">Posit Cloud Medical Cleaning Workshop</a>.</p>
+<p><strong><a href="https://bit.ly/posit-cloud-cleaning-medical-data" target="_blank">bit.ly/posit-cloud-cleaning-medical-data</a></strong>.</p>
 <p>If you will not be using the Posit Cloud instance, you can just watch along as the instructors teach.</p>
 <p>As a more high-risk alternative, if you would like to try this out on your own computer, please have the following installed and configured on your machine. Note that we will <strong>NOT</strong> be able to help you with local computer problems during the workshop. If you choose to do this, you are on your own.</p>
 <ul>
 <li><p>Recent version of <strong>R</strong></p></li>
 <li><p>Recent version of <strong>RStudio</strong></p></li>
-<li><p>Recent version of packages used in this workshop.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>instll_pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"tidyxl"</span>, <span class="st">"unpivotr"</span>, <span class="st">"readxl"</span>, <span class="st">"openxlsx"</span>, <span class="st">"janitor"</span>, <span class="st">"gtsummary"</span>, <span class="st">"here"</span>, <span class="st">"padr"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(instll_pkgs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Recent version of packages used in this workshop.</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>instll_pkgs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"tidyxl"</span>, <span class="st">"unpivotr"</span>, <span class="st">"readxl"</span>, <span class="st">"openxlsx"</span>, <span class="st">"janitor"</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">"gtsummary"</span>, <span class="st">"here"</span>, <span class="st">"padr"</span>,  <span class="st">"here"</span>, <span class="st">"skimr"</span>, <span class="st">"visdat"</span>, <span class="st">"summarytools"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">"DataExplorer"</span>, <span class="st">"Hmisc"</span>, <span class="st">"pointblank"</span>, <span class="st">"codebookr"</span>, <span class="st">"codebook"</span>, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">"memisc"</span>, <span class="st">"sjPlot"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(instll_pkgs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
 <li><p>Ensure you can knit R markdown documents</p></li>
 <li><p>Open RStudio and create a new Rmarkdown document</p></li>
 <li><p>Save the document and check you are able to knit it.</p></li>
