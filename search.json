@@ -690,7 +690,7 @@
     "href": "slides/index.html#one-minor-issue---separation-of-measure",
     "title": "Cleaning Medical Data with R",
     "section": "One Minor Issue - Separation of measure",
-    "text": "One Minor Issue - Separation of measure\n\nProblemCodeResultAlternative within pivot_longer\n\n\n\nthe “measure” column combines a timepoint and the measure\nNeeds to be separated.\nYou already know how to use separate()\nArguments\n\ncol\nsep\ninto\n\n\n\n\n\ntall |&gt; \n  separate(col = \"measure\",\n           sep = \"_\",\n           into = c(\"timept\", \"measure\")\n           ) \n\n\n\n\n\n# A tibble: 180 × 5\n   pat_id treatment timept measure score\n   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;\n 1 001    upa       start  mes      3   \n 2 001    upa       end    mes      0   \n 3 001    upa       start  bss     75.9 \n 4 001    upa       end    bss      9.85\n 5 001    upa       start  emo     79.3 \n 6 001    upa       end    emo     39.8 \n 7 002    uste      start  mes      2   \n 8 002    uste      end    mes      1   \n 9 002    uste      start  bss     54.7 \n10 002    uste      end    bss     32.7 \n# ℹ 170 more rows\n\n\n\n\n\nYou can do this within pivot_longer with one more argument (if you read all of the pivot_longer documentation)\n\n\n\n\nwide |&gt; \n  pivot_longer(cols = 3:8,\n    names_to = c(\"timept\", \"measure\"),\n    names_sep = \"_\",\n    values_to = \"score\")\n\n\n\n\n# A tibble: 180 × 5\n   pat_id treatment timept measure score\n   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;\n 1 001    upa       start  mes      3   \n 2 001    upa       end    mes      0   \n 3 001    upa       start  bss     75.9 \n 4 001    upa       end    bss      9.85\n 5 001    upa       start  emo     79.3 \n 6 001    upa       end    emo     39.8 \n 7 002    uste      start  mes      2   \n 8 002    uste      end    mes      1   \n 9 002    uste      start  bss     54.7 \n10 002    uste      end    bss     32.7 \n# ℹ 170 more rows"
+    "text": "One Minor Issue - Separation of measure\n\nProblemCodeResultAlternative within pivot_longer\n\n\n\nthe “measure” column combines a timepoint and the measure\nNeeds to be separated.\nYou already know how to use separate()\nArguments\n\ncol\nsep\ninto\n\n\n\n\n\ntall |&gt; \n  separate(col = \"measure\",\n           sep = \"_\",\n           into = c(\"timept\", \"measure\")\n           ) \n\n\n\n\n\n# A tibble: 180 × 5\n   pat_id treatment timept measure score\n   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;\n 1 001    upa       start  mes      3   \n 2 001    upa       end    mes      0   \n 3 001    upa       start  bss     75.9 \n 4 001    upa       end    bss      9.85\n 5 001    upa       start  emo     79.3 \n 6 001    upa       end    emo     39.8 \n 7 002    uste      start  mes      2   \n 8 002    uste      end    mes      1   \n 9 002    uste      start  bss     54.7 \n10 002    uste      end    bss     32.7 \n# ℹ 170 more rows\n\n\n\n\n\nYou can do this within pivot_longer with just one more argument (if you read all of the pivot_longer documentation)\n\n\n\n\nwide |&gt; \n  pivot_longer(cols = 3:8,\n    names_to = c(\"timept\", \"measure\"),\n    names_sep = \"_\",\n    values_to = \"score\")\n\n\n\n\n# A tibble: 180 × 5\n   pat_id treatment timept measure score\n   &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;\n 1 001    upa       start  mes      3   \n 2 001    upa       end    mes      0   \n 3 001    upa       start  bss     75.9 \n 4 001    upa       end    bss      9.85\n 5 001    upa       start  emo     79.3 \n 6 001    upa       end    emo     39.8 \n 7 002    uste      start  mes      2   \n 8 002    uste      end    mes      1   \n 9 002    uste      start  bss     54.7 \n10 002    uste      end    bss     32.7 \n# ℹ 170 more rows"
   },
   {
     "objectID": "slides/index.html#pivoting-longer-1",
@@ -844,7 +844,7 @@
     "href": "slides/index.html#workhorse-joins",
     "title": "Cleaning Medical Data with R",
     "section": "Workhorse Joins",
-    "text": "Workhorse Joins\n\nleft_join is your workhorse. Start with patient identifiers/uniqid and add data to the right side.\nSometimes you will need to wrangle/process incoming data, then right_join it to the patient demographics"
+    "text": "Workhorse Joins\n\nleft_join is your workhorse. Start with patient identifiers/uniqid and add data to the right side.\nSometimes you will need to wrangle/process incoming data, then pipe it in to right_join it to the patient demographics"
   },
   {
     "objectID": "slides/index.html#fancy-joins",
@@ -852,6 +852,13 @@
     "title": "Cleaning Medical Data with R",
     "section": "Fancy Joins",
     "text": "Fancy Joins\n\nThere are multiple kinds of fancy joins (semi_join, anti_join, inner_join, full_join, union, intersect, setdiff) which come in handy once in a while.\nThe many kinds of joins are all well explained here\n\n\n\n\nSubset your data (x), keeping only the ones (y=hospitalized) who were hospitalized.\n\n\n\n\n\n\n\n\nSubset your data (x), keeping only the ones (y = dead) who are NOT dead.\n\n\n\n\n\n\n\nThe joins shown below are filtering joins, which filter out rows in your x (LHS) dataset, but do not add any new variables."
+  },
+  {
+    "objectID": "slides/index.html#the-newest-fancy-joins",
+    "href": "slides/index.html#the-newest-fancy-joins",
+    "title": "Cleaning Medical Data with R",
+    "section": "The Newest Fancy Joins",
+    "text": "The Newest Fancy Joins\n\nYou can use join_by for more joining options, including\n\ninequality - only match if &gt; value\nclosest date\nclosest date as long it is after the comparison date, but within 30 days\nonly match if interval/date overlaps\nmatch value if it is within a range\n\nLearn more at Join Specifications"
   },
   {
     "objectID": "slides/index.html#data-horror",
